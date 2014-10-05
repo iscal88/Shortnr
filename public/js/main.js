@@ -1,4 +1,4 @@
-var path = "http://desarrollo.babel.es:8040";
+var path = "http://shortnr-iacosta.rhcloud.com/";
 
 $(document).ready(function() {
 

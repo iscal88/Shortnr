@@ -17,7 +17,7 @@ mongoose.connect('mongodb://127.0.0.1/urls', function(err, res) {
 
 require('./routes')(app, debugMode);
 
-app.listen(8000, function() {
-	console.log("Aplicación iniciada en http://localhost:8000");
-});
-
+var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080;   // Port 8080 if you run locally
+var address =  process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1"; // Listening to localhost if you run locally
+app.listen(port, address);
+console.log("Aplicación iniciada en " + address + ":" + port);

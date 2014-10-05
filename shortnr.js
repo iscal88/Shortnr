@@ -9,11 +9,13 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/', express.static(__dirname + '/public'));
 
-
-mongoose.connect('mongodb://127.0.0.1/urls', function(err, res) {
-	if (err) console.log("ERROR: Conectando a la base de datos: ", err);
-	else console.log('Conexión a la base de datos realizada correctamente.');
-});
+var options = {
+  db: { native_parser: true },
+  server: { poolSize: 5 },
+  user: 'admin',
+  pass: 'mZWE6EN-lWWY'
+}
+mongoose.connect('mongodb://localhost/shortnr', options);
 
 require('./routes')(app, debugMode);
 

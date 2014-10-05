@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Acortador URLs - Red Abogacía</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta class="author">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/googlejsapi.js"></script>
+        <script type="text/javascript">
+          // Load the Visualization API and the piechart package.
+          google.load('visualization', '1.0', {'packages':['corechart']});
+        </script>
+
+</head>
+<body>
+	
+	<header class="header">
+		<p>Acortador de URLs</p>	
+	</header>
+
+	<section class="content">
+		<div class="box">
+			<p class="title">Generar URL corta</p>
+			<input id="input_url_larga" type="text" placeholder="Introduce tu URL larga..." >
+			<input id="btn_generar_url" type="button" value="Generar">
+			<p class="info">Todas las URLs generadas y sus estadísticas son públicas.</p>
+
+			<div id="box-result-generar" class="box-result">
+				<p><b>URL generada:</b> <a id="out_url" href="http://www.google.es" target="_blank">http://shortnr/ad86asd</a></p>
+				<p><b>Admin key:</b> <em id="out_key">1g23k</em></p>
+			</div>
+			<p id="error_generar" class="error"></p>
+		</div>
+
+
+		<div class="box">
+			<p class="title">Administrar URL</p>
+			<input id="input_url_larga_admin" type="text" placeholder="Introduce tu URL corta..." >
+			<input id="btn_estadisticas_url" type="button" value="Estadísticas">
+			<input id="input_admin_key_admin" type="password" placeholder="Key" >
+			<input id="btn_borrar_url" type="button" value="Borrar">
+
+			<div id="box-result-administrar" class="box-result">
+				<p><b>Número de visitas:</b> <em id="out_visits">4</em></p>
+				<br>
+				<div class="charts">
+				    <div id="piechartDevices" style="float: left;"></div>
+				    <div id="piechartOS" style="float: left;"></div>
+				    <div id="piechartBrowser" style="float: left;"></div>					
+				</div>
+				<br>
+			</div>
+			<p id="error_administrar" class="error"></p>
+		</div>
+
+	</section>
+
+	
+
+</body>
+</html>

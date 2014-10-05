@@ -1,0 +1,13 @@
+{
+	"name": "Shortnr",
+	"version": "0.0.1",
+	"descripcion": "Acortador de URL's",
+	"main": "shortnr.js",
+	"dependencies": {
+		"express": "latest",
+		"body-parser": "latest",
+		"mongoose": "latest",
+		"ua-parser-js": "latest",
+	    "cors": "latest"
+	}
+}

@@ -1,4 +1,5 @@
 var path = "http://shortnr.es";
+// ESTO ES LO NUEVO QUE HEMOS CREADO!!!!!
 
 $(document).ready(function() {
 

@@ -1,4 +1,4 @@
-var path = "http://shortnr-iacosta.rhcloud.com";
+var path = "http://shortnr.es";
 
 $(document).ready(function() {
 
